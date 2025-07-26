@@ -1,3 +1,9 @@
+# Base reference files
+AvaliacaoIII-Base
+
+#IntelliJ
+.idea
+
 # Compiled class file
 *.class
 
