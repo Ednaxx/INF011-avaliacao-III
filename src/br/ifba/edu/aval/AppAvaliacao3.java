@@ -6,13 +6,16 @@ import br.ifba.edu.aval.exception.AtividadeNaoPermitidaException;
 import br.ifba.edu.aval.exception.DNFException;
 import br.ifba.edu.aval.model.Apurador;
 import br.ifba.edu.aval.model.BoletimProva;
+import br.ifba.edu.aval.model.apuracao.ApuradorDirector;
+import br.ifba.edu.aval.model.apuracao.ConfiguradorApurador;
 
 public class AppAvaliacao3 extends AppAvaliacaoBase{
 	
 	private Apurador apurador;
 	
 	public AppAvaliacao3() {
-		this.apurador = new Apurador(Duration.ofMinutes(120));
+		ApuradorDirector director = new ApuradorDirector(new ConfiguradorApurador());
+		this.apurador = director.construirApuradorCompleto(Duration.ofMinutes(120));
 	}
 	
 	public void aval() {
