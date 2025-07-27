@@ -4,8 +4,8 @@ import java.time.Duration;
 
 import br.ifba.edu.aval.exception.AtividadeNaoPermitidaException;
 import br.ifba.edu.aval.exception.DNFException;
-import br.ifba.edu.aval.model.apuracao.CadeiaApuracao;
-import br.ifba.edu.aval.model.apuracao.ContextoApuracao;
+import br.ifba.edu.aval3.apuracao.CadeiaApuracao;
+import br.ifba.edu.aval3.apuracao.ContextoApuracao;
 
 public class Apurador {
 	

@@ -6,8 +6,8 @@ import br.ifba.edu.aval.exception.AtividadeNaoPermitidaException;
 import br.ifba.edu.aval.exception.DNFException;
 import br.ifba.edu.aval.model.Apurador;
 import br.ifba.edu.aval.model.BoletimProva;
-import br.ifba.edu.aval.model.apuracao.ApuradorDirector;
-import br.ifba.edu.aval.model.apuracao.ConfiguradorApurador;
+import br.ifba.edu.aval3.apuracao.ApuradorDirector;
+import br.ifba.edu.aval3.apuracao.ConfiguradorApurador;
 
 public class AppAvaliacao3 extends AppAvaliacaoBase{
 	

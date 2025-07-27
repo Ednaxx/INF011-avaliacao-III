@@ -1,4 +1,4 @@
-package br.ifba.edu.aval.model.apuracao;
+package br.ifba.edu.aval3.apuracao;
 
 import br.ifba.edu.aval.exception.AtividadeNaoPermitidaException;
 import br.ifba.edu.aval.exception.DNFException;

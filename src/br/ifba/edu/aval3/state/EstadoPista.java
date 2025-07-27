@@ -1,11 +1,12 @@
-package br.ifba.edu.aval.model.state;
+package br.ifba.edu.aval3.state;
 
 import java.time.Duration;
 
 import br.ifba.edu.aval.exception.AtividadeNaoPermitidaException;
 import br.ifba.edu.aval.model.BoletimProva;
+import br.ifba.edu.aval.model.Prisma;
 
-public class EstadoPosProva implements EstadoBoletimProva {
+public class EstadoPista implements EstadoBoletimProva {
 
     @Override
     public void apresentarPraLargada(BoletimProva contexto) throws AtividadeNaoPermitidaException {
@@ -29,11 +30,12 @@ public class EstadoPosProva implements EstadoBoletimProva {
 
     @Override
     public void registrar(BoletimProva contexto, Integer prismaID, Duration tempo) throws AtividadeNaoPermitidaException {
-        throw new AtividadeNaoPermitidaException("Não pode registrar prisma");
+        contexto.passagens.registrarPassagem(prismaID, tempo);
     }
 
     @Override
     public void registrarChegada(BoletimProva contexto, Duration tempo) throws AtividadeNaoPermitidaException {
-        throw new AtividadeNaoPermitidaException("Fase não permite registro de chegada.");
+        contexto.passagens.registrarPassagem(Prisma.CHEGADA, tempo);
+        contexto.alterarEstado(new EstadoPosProva());
     }
 }

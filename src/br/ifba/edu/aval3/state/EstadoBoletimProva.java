@@ -1,4 +1,4 @@
-package br.ifba.edu.aval.model.state;
+package br.ifba.edu.aval3.state;
 
 import java.time.Duration;
 

@@ -4,8 +4,8 @@ import java.time.Duration;
 import java.util.List;
 
 import br.ifba.edu.aval.exception.AtividadeNaoPermitidaException;
-import br.ifba.edu.aval.model.state.EstadoBoletimProva;
-import br.ifba.edu.aval.model.state.EstadoPreProva;
+import br.ifba.edu.aval3.state.EstadoBoletimProva;
+import br.ifba.edu.aval3.state.EstadoPreProva;
 import br.ifba.edu.aval1.prototype.ListaPassagens;
 
 public class BoletimProva {

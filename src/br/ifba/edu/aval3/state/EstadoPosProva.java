@@ -1,21 +1,20 @@
-package br.ifba.edu.aval.model.state;
+package br.ifba.edu.aval3.state;
 
 import java.time.Duration;
 
 import br.ifba.edu.aval.exception.AtividadeNaoPermitidaException;
 import br.ifba.edu.aval.model.BoletimProva;
 
-public class EstadoMomentoLargada implements EstadoBoletimProva {
+public class EstadoPosProva implements EstadoBoletimProva {
 
     @Override
     public void apresentarPraLargada(BoletimProva contexto) throws AtividadeNaoPermitidaException {
-        // Já está na fase de momento da largada, operação redundante mas permitida
-        // Não há mudança de estado
+        throw new AtividadeNaoPermitidaException("Fase não permite se apresentar pra largada.");
     }
 
     @Override
     public void registrarLargada(BoletimProva contexto) throws AtividadeNaoPermitidaException {
-        contexto.alterarEstado(new EstadoPista());
+        throw new AtividadeNaoPermitidaException("Fase não permite largar.");
     }
 
     @Override
