@@ -223,30 +223,3 @@ classDiagram
     ConfiguradorApurador --> ContextoApuracao : creates
     ConfiguradorApurador --> RegraApuracao : adds
 ```
-
-### Estrutura de Arquivos
-
-```
-src/br/ifba/edu/aval/
-├── model/
-│   ├── BoletimProva.java (Context do State)
-│   ├── Apurador.java (Refatorado para usar Chain of Responsibility)
-│   ├── state/
-│   │   ├── EstadoBoletimProva.java (State Interface)
-│   │   ├── EstadoPreProva.java (ConcreteState)
-│   │   ├── EstadoMomentoLargada.java (ConcreteState)
-│   │   ├── EstadoPista.java (ConcreteState)
-│   │   └── EstadoPosProva.java (ConcreteState)
-│   └── apuracao/
-│       ├── RegraApuracao.java (Handler Interface)
-│       ├── RegraVerificarChegada.java (ConcreteHandler)
-│       ├── RegraVerificarTempoMaximo.java (ConcreteHandler)
-│       ├── RegraVerificarOrdemPrismas.java (ConcreteHandler)
-│       ├── RegraVerificarTodosPrismas.java (ConcreteHandler)
-│       ├── RegraPenalizacaoAtraso.java (ConcreteHandler)
-│       ├── CadeiaApuracao.java (Chain Manager)
-│       ├── ConfiguradorApurador.java (Builder)
-│       ├── ApuradorDirector.java (Director)
-│       ├── ContextoApuracao.java (Product)
-│       └── ResultadoRegra.java (Result Object)
-```
